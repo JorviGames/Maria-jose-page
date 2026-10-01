@@ -1,0 +1,51 @@
+@use "abstracts" as v;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: v.$fuente-texto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: v.$texto;
+  background: v.$blanco;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 16px;
+  font-family: v.$fuente-titulos;
+  font-weight: 600;
+  line-height: 1.15;
+  color: v.$navy;
+}
+
+h1 { font-size: 60px; }
+h2 { font-size: 40px; }
+h3 { font-size: 20px; font-family: v.$fuente-texto; }
+
+p {
+  margin: 0 0 16px;
+  color: v.$texto-secundario;
+}
+
+a {
+  color: v.$azul;
+  text-decoration: none;
+  transition: color .2s;
+
+  &:hover { color: v.$navy; }
+}

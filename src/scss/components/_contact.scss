@@ -1,0 +1,51 @@
+@use "../abstracts" as v;
+
+.contacto-caja {
+  background: v.$azul-claro;
+  border-radius: v.$radio-xl;
+  padding: 64px;
+
+  @media (max-width: v.$bp-tablet) { padding: 32px 20px; }
+}
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  margin-top: 14px;
+  max-width: 380px;
+  font-weight: 600;
+  color: v.$navy;
+
+  .icono { width: 42px; height: 42px; font-size: 18px; }
+  &:hover { color: v.$azul; }
+}
+
+.form-contacto {
+  padding: 36px;
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: v.$navy;
+  }
+
+  .form-control {
+    min-height: 48px;
+    background: v.$gris-fondo;
+    border: 1px solid v.$borde-input;
+    border-radius: v.$radio-sm;
+    font-size: 15px;
+    color: v.$texto;
+
+    &:focus {
+      border-color: v.$azul;
+      box-shadow: 0 0 0 3px v.$azul-claro;
+    }
+  }
+
+  textarea.form-control { resize: none; }
+}

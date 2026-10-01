@@ -1,0 +1,119 @@
+@use "../abstracts" as v;
+
+.site-nav {
+  background: v.$blanco;
+  border-bottom: 1px solid v.$borde;
+
+  .navbar {
+    padding: 20px 0;
+  }
+
+  // Marca
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: v.$radio-md;
+    background: v.$azul;
+    color: v.$blanco;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: v.$fuente-titulos;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .brand-name {
+    font-family: v.$fuente-titulos;
+    font-size: 20px;
+    font-weight: 600;
+    color: v.$navy;
+  }
+
+  .brand-role {
+    font-size: 12px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: v.$texto-secundario;
+  }
+
+  // Enlaces
+  .navbar-nav {
+    gap: 36px;
+  }
+
+  .nav-link {
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: v.$texto;
+    transition: color .2s;
+
+    &:hover,
+    &.active {
+      color: v.$azul;
+    }
+  }
+
+  // Botón
+  .btn-contactar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 28px;
+    border: 1.5px solid v.$azul;
+    border-radius: v.$radio-md;
+    background: v.$azul;
+    color: v.$blanco;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background .2s, border-color .2s;
+
+    &:hover {
+      background: v.$navy;
+      border-color: v.$navy;
+      color: v.$blanco;
+    }
+  }
+
+  // Hamburguesa
+  .navbar-toggler {
+    border: 1px solid v.$borde;
+    border-radius: v.$radio-sm;
+
+    &:focus {
+      box-shadow: 0 0 0 3px v.$azul-claro;
+    }
+  }
+
+  // Tablet y móvil (menú colapsado)
+  @media (max-width: 991.98px) {
+    .navbar-nav {
+      gap: 0;
+      padding: 16px 0;
+    }
+
+    .nav-link {
+      padding: 12px 0;
+    }
+
+    .btn-contactar {
+      width: 100%;
+    }
+  }
+}

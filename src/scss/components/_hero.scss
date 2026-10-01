@@ -1,0 +1,69 @@
+@use "../abstracts" as v;
+ 
+.hero {
+  padding: 88px 0;
+  background-color: v.$gris-fondo;
+  // trama sutil tipo libro contable
+  background-image: repeating-linear-gradient(
+    to bottom, transparent 0, transparent 47px, #E6ECF7 47px, #E6ECF7 48px
+  );
+ 
+  h1 { margin-bottom: 24px; }
+ 
+  .lead-text {
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 540px;
+    margin-bottom: 36px;
+  }
+ 
+  @media (max-width: v.$bp-tablet) { padding: 56px 0; }
+}
+ 
+.hero-checks {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin: 40px 0 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: v.$navy;
+ 
+  i { color: v.$azul; }
+}
+ 
+.hero-foto {
+  position: relative;
+  max-width: 460px;
+  margin: 0 auto;
+ 
+  > img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: v.$radio-xl;
+    border: 8px solid v.$blanco;
+    background: v.$azul-claro;
+  }
+}
+ 
+.hero-badge {
+  position: absolute;
+  left: -8px;
+  bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: v.$blanco;
+  border: 1px solid v.$borde;
+  border-radius: v.$radio-lg;
+ 
+  .icono { width: 44px; height: 44px; font-size: 20px; }
+  strong { display: block; font-size: 15px; color: v.$navy; line-height: 1.3; }
+  small { font-size: 13px; color: v.$texto-secundario; }
+ 
+  @media (max-width: v.$bp-movil) { left: 8px; }
+}

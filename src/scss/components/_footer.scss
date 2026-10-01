@@ -1,0 +1,64 @@
+@use "../abstracts" as v;
+
+.site-footer {
+  background: v.$navy;
+  color: v.$texto-sobre-navy;
+  padding: 56px 0 28px;
+  font-size: 14px;
+
+  p { color: v.$texto-sobre-navy; max-width: 320px; margin-top: 14px; }
+  small { font-size: 12px; letter-spacing: .06em; }
+
+  .footer-marca {
+    font-family: v.$fuente-titulos;
+    font-size: 22px;
+    font-weight: 600;
+    color: v.$blanco;
+  }
+
+  h4 {
+    font-family: v.$fuente-texto;
+    font-size: 14px;
+    font-weight: 700;
+    color: v.$blanco;
+    margin-bottom: 14px;
+  }
+
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin-bottom: 10px; }
+
+  a { color: v.$texto-sobre-navy; &:hover { color: v.$blanco; } }
+
+  .footer-copy {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid v.$linea-footer;
+    font-size: 13px;
+  }
+}
+
+.footer-redes {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+
+  a {
+    width: 40px;
+    height: 40px;
+    border-radius: v.$radio-md;
+    background: v.$linea-footer;
+    color: v.$blanco;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+
+    &:hover { background: v.$azul; color: v.$blanco; }
+  }
+}
+
+.footer-contacto i {
+  margin-right: 8px;
+  color: v.$texto-sobre-navy;
+}

@@ -1,0 +1,30 @@
+@use "../abstracts" as v;
+ 
+.btn-azul,
+.btn-borde {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border: 1.5px solid v.$azul;
+  border-radius: v.$radio-md;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background .2s, border-color .2s, color .2s;
+}
+ 
+.btn-azul {
+  background: v.$azul;
+  color: v.$blanco;
+ 
+  &:hover { background: v.$navy; border-color: v.$navy; color: v.$blanco; }
+}
+ 
+.btn-borde {
+  background: v.$blanco;
+  color: v.$azul;
+ 
+  &:hover { background: v.$azul-claro; color: v.$navy; border-color: v.$navy; }
+}
+ 

@@ -1,0 +1,41 @@
+@use "../abstracts" as v;
+ 
+.tarjeta {
+  background: v.$blanco;
+  border: 1px solid v.$borde;
+  border-radius: v.$radio-lg;
+  padding: 28px;
+}
+ 
+.icono {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: v.$azul-claro;
+  color: v.$azul;
+  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.servicio {
+  height: 100%;
+ 
+  .icono { margin-bottom: 20px; }
+  h3 { color: v.$navy; margin-bottom: 10px; }
+  p { font-size: 15px; }
+  a { font-size: 14px; font-weight: 600; }
+}
+ 
+.dato {
+  padding: 20px;
+ 
+  strong {
+    display: block;
+    font-family: v.$fuente-titulos;
+    font-size: 28px;
+    color: v.$azul;
+  }
+  span { font-size: 14px; color: v.$texto-secundario; }
+}

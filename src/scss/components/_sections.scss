@@ -1,0 +1,109 @@
+@use "../abstracts" as v;
+ 
+.section {
+  padding: 104px 0;
+ 
+  @media (max-width: v.$bp-tablet) { padding: 64px 0; }
+}
+ 
+.section-gris { background: v.$gris-fondo; }
+ 
+.section-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+ 
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: v.$azul;
+}
+ 
+.foto-redonda {
+  width: 100%;
+  max-width: 440px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: v.$radio-xl;
+  border: 1px solid v.$borde;
+  background: v.$azul-claro;
+  margin: 0 auto;
+}
+ 
+// Línea de tiempo
+.timeline {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0 0 0 32px;
+  border-left: 2px solid v.$borde-input;
+ 
+  li {
+    position: relative;
+    padding-bottom: 36px;
+ 
+    &:last-child { padding-bottom: 0; }
+ 
+    &::before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: v.$azul;
+      border: 3px solid v.$blanco;
+    }
+  }
+ 
+  .fecha { font-size: 13px; font-weight: 700; color: v.$azul; }
+  h3 { margin: 4px 0 6px; font-size: 19px; color: v.$navy; }
+  p { font-size: 15px; margin: 0; }
+}
+ 
+.bloque-navy {
+  background: v.$navy;
+  border-radius: v.$radio-lg;
+  padding: 36px;
+  margin-bottom: 24px;
+ 
+  h3 { font-family: v.$fuente-titulos; font-size: 24px; color: v.$blanco; }
+  p { color: v.$texto-sobre-navy; font-size: 15px; }
+}
+ 
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+ 
+  span {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: v.$azul-claro;
+    color: v.$navy;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+ 
+.testimonio {
+  margin: 0;
+  padding: 32px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: v.$texto-secundario;
+ 
+  cite {
+    display: block;
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: v.$navy;
+  }
+}
+ 
