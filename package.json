@@ -8,7 +8,8 @@
     "server": "nodemon src/app.js",
     "browser-sync": "browser-sync start --proxy localhost:3000 --files \"public/**/*.*, src/views/**/*.*\"",
     "dev": "concurrently \"npm run sass\" \"npm run server\" \"npm run browser-sync\"",
-    "bootstrap:js": "copyfiles -u 3 node_modules/bootstrap/dist/js/bootstrap.bundle.min.js public/js"
+    "bootstrap:js": "copyfiles -u 3 node_modules/bootstrap/dist/js/bootstrap.bundle.min.js public/js",
+    "build": "sass src/scss/main.scss public/css/main.css && copyfiles -u 2 src/views/index.html public"
   },
   "keywords": [],
   "author": "",
